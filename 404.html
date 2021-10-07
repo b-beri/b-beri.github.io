@@ -1,8 +1,6 @@
 <head> 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js">
   </script>
-  <script src="./jquery.countdown360.js" type="text/javascript" charset="utf-8">
-  </script>
   <meta http-equiv = "refresh" content = "11; url = https://b-beri.github.io/ " />
   <script src="https://kit.fontawesome.com/aac771de81.js" crossorigin="anonymous"></script>
 </head>
@@ -161,37 +159,35 @@
     You have wandered into an area full of dust (desert), So please sit tight to <u>go back</u> to the master of the webpage/s in 10 s <i class="fas fa-tachometer-alt"></i>
   </span>
 </div>
-<body>
+<div id="container">
+  <div id="countdown"></div>
+  <script type="text/javascript" charset="utf-8">
 
-  <div id="container">
-    <div id="countdown"></div>
-    <script type="text/javascript" charset="utf-8">
-
-     var countdown =  $("#countdown").countdown360({
-         radius      : 50,
-         seconds     : 10,
-         fontColor   : '#FFFFFF',
-         autostart   : false,
-         onComplete  : function () { console.log('done') }
-     });
-    countdown.start();
-     $(document).on("click","button",function(e){
-       e.preventDefault();
-       var type = $(this).attr("data-type");
-       if(type === "time-remaining")
-       {
-         var timeRemaining = countdown.getTimeRemaining();
-         alert(timeRemaining);
-       }
-       else
-       {
-         var timeElapsed = countdown.getElapsedTime();
-         alert(timeElapsed);
-       }
-     });
-    </script>
-  </div>
-
+   var countdown =  $("#countdown").countdown360({
+       radius      : 50,
+       seconds     : 10,
+       fontColor   : '#FFFFFF',
+       autostart   : false,
+       onComplete  : function () { console.log('done') }
+   });
+  countdown.start();
+   $(document).on("click","button",function(e){
+     e.preventDefault();
+     var type = $(this).attr("data-type");
+     if(type === "time-remaining")
+     {
+       var timeRemaining = countdown.getTimeRemaining();
+       alert(timeRemaining);
+     }
+     else
+     {
+       var timeElapsed = countdown.getElapsedTime();
+       alert(timeElapsed);
+     }
+   });
+  </script>
+</div>
+<body> 
   <button class="button button1" onclick="window.location.href='b-beri.github.io';" value="Click Here" >Redirect Now</button>
   <!--<button data-type="time-remaining">Time Remaining</button>
   <button data-type="time-elapsed">Time Elapsed</button> -->
