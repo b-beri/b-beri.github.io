@@ -4,6 +4,8 @@ html {
   
   body {
     margin:0;
+    overflow:auto;
+  
   }
   
   .bg {
@@ -29,17 +31,48 @@ html {
   
   .content {
     background-color:rgba(255,255,255,.8);
-    border-radius:.25em;
+    border-radius:.85em;
     box-shadow:0 0 .25em rgba(0,0,0,.25);
     box-sizing:border-box;
     left:50%;
     padding:10vmin;
-    position:fixed;
+    position:absolute;
     text-align:center;
     top:50%;
     transform:translate(-50%, -50%);
   }
   
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    width: 50%;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #5F9EA0;
+    color:beige;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #afeeee;
+    color:#4169e1;
+  }
+  
+
   h1 {
     font-family:monospace;
   }
